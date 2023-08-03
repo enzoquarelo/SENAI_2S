@@ -1,0 +1,24 @@
+USE CATALOGO_M;
+GO
+
+INSERT INTO GENERO (nomeGenero)
+VALUES ('AÇÃO'), ('TERROR');
+GO
+
+INSERT INTO GENERO (nomeGenero)
+VALUES ('ROMANCE'), ('COMÉDIA');
+GO
+
+
+
+INSERT INTO FILME (idGenero,tituloFilme)
+VALUES (1,'SPIDER-MAN'), (1,'VINGADORES'),
+       (2,'GHOSTFACE'), (3,'A CULPA É DAS ESTRELAS');
+GO
+
+
+UPDATE FILME  
+SET tituloFilme = 'A FREIRA'
+WHERE idFilme = 3; 
+GO
+
