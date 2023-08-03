@@ -1,24 +1,19 @@
 USE CATALOGO_M;
-GO
 
 INSERT INTO GENERO (nomeGenero)
-VALUES ('AÇÃO'), ('TERROR');
-GO
+VALUES ('TERROR'), ('AÇÃO');
+
 
 INSERT INTO GENERO (nomeGenero)
-VALUES ('ROMANCE'), ('COMÉDIA');
-GO
+VALUES ('COMÉDIA');
 
 
 
 INSERT INTO FILME (idGenero,tituloFilme)
-VALUES (1,'SPIDER-MAN'), (1,'VINGADORES'),
-       (2,'GHOSTFACE'), (3,'A CULPA É DAS ESTRELAS');
-GO
+VALUES (2,'INDIANA JONES'), (1,'INVOCAÇÃO DO MAL'),
+       (1,'O EXORCISTA'), (3,'A CULPA É DAS ESTRELAS');
 
 
 UPDATE FILME  
-SET tituloFilme = 'A FREIRA'
-WHERE idFilme = 3; 
-GO
-
+SET tituloFilme = 'OS FAROFEIROS'
+WHERE idFilme = 4; 
