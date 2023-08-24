@@ -24,9 +24,16 @@ namespace webapi.filmes.Repositories
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Cadastra um novo gênero
+        /// </summary>
         public void Cadastrar(GeneroDomain novoGenero)
         {
-            throw new NotImplementedException();
+            using (SqlConnection con = new SqlConnection(stringConexao)
+            {
+                //Declara a query que será eexcutada
+                string queryInsert = "INSERT INTO genero(Nome) VALUES"
+            }
         }
 
         public void Deletar(int id)
