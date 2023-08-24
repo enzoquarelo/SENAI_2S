@@ -31,3 +31,8 @@ C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\obj\Debug\n
 C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\obj\Debug\net7.0\webapi.filmes.pdb
 C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\obj\Debug\net7.0\webapi.filmes.genruntimeconfig.cache
 C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\obj\Debug\net7.0\ref\webapi.filmes.dll
+C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\obj\Debug\net7.0\webapi.filmes.MvcApplicationPartsAssemblyInfo.cs

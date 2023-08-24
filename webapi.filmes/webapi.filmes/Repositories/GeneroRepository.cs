@@ -25,14 +25,16 @@ namespace webapi.filmes.Repositories
         }
 
         /// <summary>
-        /// Cadastra um novo gênero
+        /// cadastrar um novo genero
         /// </summary>
+        /// <param name="novoGenero"> objeto com as informacoes que serao cadastradas <param>
         public void Cadastrar(GeneroDomain novoGenero)
         {
-            using (SqlConnection con = new SqlConnection(stringConexao)
+            //declara a conexao passando a string de conexao como parametro 
+            using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                //Declara a query que será eexcutada
-                string queryInsert = "INSERT INTO genero(Nome) VALUES"
+                //declara a query que sera executada
+                string queryInsert = "INSERT INTO Genero (Nome) VALUES ('" + novoGenero.Nome + "')";
             }
         }
 
