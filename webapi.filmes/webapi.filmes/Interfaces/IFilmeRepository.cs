@@ -3,7 +3,7 @@ using webapi.filmes.Repositories;
 
 namespace webapi.filmes.Interfaces
 {
-    public class IFilmeRepository
+    public interface IFilmeRepository
     {
         /// <summary>
         /// Método para cadastrar filmes

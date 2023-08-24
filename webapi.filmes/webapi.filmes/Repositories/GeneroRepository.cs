@@ -73,9 +73,13 @@ namespace webapi.filmes.Repositories
                             Nome = rdr["Nome"].ToString()
                         };
 
+                        //adiciona cada objeto dentro da lista
                         listaGeneros.Add(genero);
                     }
                 }
+
+                //retorna a lista 
+                return listaGeneros;
             }
         }
     }
