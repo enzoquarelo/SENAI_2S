@@ -34,12 +34,15 @@ namespace webapi.filmes.Repositories
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
                 //declara a query que sera executada
-                string queryInsert = "INSERT INTO Genero (Nome) VALUES ('" + novoGenero.Nome + "')";
+                string queryInsert = "INSERT INTO Genero (Nome) VALUES (@Nome)";
 
 
                 //declara o sqlcommand com a query que sera executada e a conexao com o bd
                 using (SqlCommand cmd = new SqlCommand(queryInsert, con))
                 {
+                    //passa o valor do paramentro @Nome
+                    cmd.Parameters.AddWithValue("@Nome",novoGenero.Nome);
+
                     //abre a conexao com o banco de dados
                     con.Open();
 
@@ -49,9 +52,31 @@ namespace webapi.filmes.Repositories
             }
         }
 
+        /// <summary>
+        /// método para deletar um gênero
+        /// </summary>
+        /// <returns></returns>
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            //declara a conexao passando a string de conexao como parametro 
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                //declara a query que sera executada
+                string queryDelete = "DELETE FROM Genero WHERE IdGenero = @IdGenero";
+
+                //declara o sqlcommand com a query que sera executada e a conexao com o bd
+                using (SqlCommand cmd = new SqlCommand(queryDelete, con))
+                {
+                    // passa o valor do parametro @IdGenero
+                    cmd.Parameters.AddWithValue("@IdGenero", id);
+
+                    // abre a conexão com o bd
+                    con.Open();
+
+                    // executar a query de deletar
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
         /// <summary>

@@ -36,3 +36,5 @@ C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\bin\Debug\n
 C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\obj\Debug\net7.0\webapi.filmes.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\bin\Debug\net7.0\webapi.filmes.xml
+C:\Users\49470161831\Desktop\SENAI_2S_bd\webapi.filmes\webapi.filmes\obj\Debug\net7.0\webapi.filmes.xml

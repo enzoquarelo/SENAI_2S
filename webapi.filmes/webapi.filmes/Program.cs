@@ -1,4 +1,5 @@
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,14 +12,17 @@ builder.Services.AddSwaggerGen(options =>
     {
         Version = "v1",
         Title = "API Filmes - SENAI",
-        Description = "API para gerenciamento de filmes, projeto feito durante a Sprint2 Back-End API." +
-        "No curso de Desenvolvimento de Sistemas no SENAI Paulo Skaf.",
+        Description = "API para gerenciamento de filmes, projeto feito durante a Sprint2 Back-End API.",
         Contact = new OpenApiContact
         {
             Name = "GitHub do Projeto - Enzo Quarelo",
             Url = new Uri("https://github.com/enzoquarelo/SENAI_2S_bd")
         }
     });
+
+    //Configura o swagger para usar o arquivo XML gerado (comentário)
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
 var app = builder.Build();

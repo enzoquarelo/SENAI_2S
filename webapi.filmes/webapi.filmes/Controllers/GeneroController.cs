@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using webapi.filmes.Domains;
 using webapi.filmes.Interfaces;
 using webapi.filmes.Repositories;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace webapi.filmes.Controllers
 {
@@ -33,8 +34,10 @@ namespace webapi.filmes.Controllers
         }
 
 
+        /// <summary>
+        ///endpoint que aciona o metodo listarTodos do repositorio e retorna a resposta para o usuario(front-end)
+        /// </summary>
 
-        //endpoint que aciona o metodo listarTodos do repositorio e retorna a resposta para o usuario(front-end)
         [HttpGet]
         public IActionResult Get()
         {
@@ -70,6 +73,27 @@ namespace webapi.filmes.Controllers
 
                 //retorna um status code 201(created)
                 return StatusCode(201);
+            }
+            catch (Exception erro)
+            {
+                //retorna status code BadRequest(400) e a mensagem do erro
+                return BadRequest(erro.Message);
+            }
+        }
+
+        /// <summary>
+        /// endpoint que aciona o metodo de deletar um genero 
+        /// </summary>
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                // chama o metodo de deletar
+                _generoRepository.Deletar(id);
+
+                //retorna um status code 204(delete)
+                return StatusCode(204);
             }
             catch (Exception erro)
             {

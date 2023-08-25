@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>webapi.filmes</name>
+    </assembly>
+    <members>
+        <member name="P:webapi.filmes.Controllers.GeneroController._generoRepository">
+            <summary>
+            objeto _generoRepository que ira receber todos os metodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:webapi.filmes.Controllers.GeneroController.Get">
+             <summary>
+            endpoint que aciona o metodo listarTodos do repositorio e retorna a resposta para o usuario(front-end)
+             </summary>
+        </member>
+        <member name="M:webapi.filmes.Controllers.GeneroController.Post(webapi.filmes.Domains.GeneroDomain)">
+            <summary>
+            endpoint que aciona o metodo de cadastro do genero 
+            </summary>
+            <param name="novoGenero">objeto recebido na requisicao</param>
+            <returns>status code 201(created)</returns>
+        </member>
+        <member name="M:webapi.filmes.Controllers.GeneroController.Delete(System.Int32)">
+            <summary>
+            endpoint que aciona o metodo de deletar um genero 
+            </summary>
+        </member>
+        <member name="M:webapi.filmes.Interfaces.IFilmeRepository.Cadastrar(webapi.filmes.Domains.FilmeDomain)">
+            <summary>
+            Método para cadastrar filmes
+            </summary>
+            <param name="novoFilme"></param>
+        </member>
+        <member name="M:webapi.filmes.Interfaces.IGeneroRepository.Cadastrar(webapi.filmes.Domains.GeneroDomain)">
+            <summary>
+            Cadastrar um novo gênero
+            </summary>
+            <param name="novoGenero"> objeto que será cadastrado </param>
+        </member>
+        <member name="M:webapi.filmes.Interfaces.IGeneroRepository.ListarTodos">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns> lista de objetos cadastrados </returns>
+        </member>
+        <member name="M:webapi.filmes.Interfaces.IGeneroRepository.AtualizarIdCorpo(webapi.filmes.Domains.GeneroDomain)">
+            <summary>
+            Atualiza um objeto existente passando seu id pelo corpo da requisição
+            </summary>
+            <param name="genero"> objeto a ser atualizado (novas informações) </param>
+        </member>
+        <member name="M:webapi.filmes.Interfaces.IGeneroRepository.AtualizarIdUrl(System.Int32,webapi.filmes.Domains.GeneroDomain)">
+            <summary>
+            Atualiza um objeto existente passando seu id pela url da requisição
+            </summary>
+            <param name="id"> id do objeto que será atualizado </param>
+            <param name="genero"> objeto a ser atualizado (novas informações) </param>
+        </member>
+        <member name="M:webapi.filmes.Interfaces.IGeneroRepository.Deletar(System.Int32)">
+            <summary>
+            Método para deletar um objeto existente passando seu id 
+            </summary>
+            <param name="id"> id do objeto a ser deletado </param>
+        </member>
+        <member name="M:webapi.filmes.Interfaces.IGeneroRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Buscar objeto existente pelo id que está cadastrado
+            </summary>
+            <param name="id"> id do objeto a ser buscado </param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:webapi.filmes.Repositories.GeneroRepository.Cadastrar(webapi.filmes.Domains.GeneroDomain)" -->
+        <member name="M:webapi.filmes.Repositories.GeneroRepository.Deletar(System.Int32)">
+            <summary>
+            método para deletar um gênero
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.filmes.Repositories.GeneroRepository.ListarTodos">
+            <summary>
+            método para listar todos os objetos gêneros
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
