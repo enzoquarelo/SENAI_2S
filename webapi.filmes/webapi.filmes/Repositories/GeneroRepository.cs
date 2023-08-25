@@ -21,7 +21,28 @@ namespace webapi.filmes.Repositories
 
         public GeneroDomain BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            // cria um objeto para guardar o genero buscado
+            GeneroDomain generoEncontrado = null;
+
+            //declara a conexao passando a string de conexao como parametro 
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                // declara a query que será executada
+                string querySelect = "SELECT IdGenero, Nome FROM Genero WHERE IdGenero = @IdGenero";
+
+                // declara o sqlcommand com a query que será executada e a conexão com o banco de dados
+                using (SqlCommand cmd = new SqlCommand(querySelect, con))
+                {
+                    //passa o valor do paramentro @IdGenero
+                    cmd.Parameters.AddWithValue("@IdGenero", id);
+
+                    //abre a conexao com o banco de dados
+                    con.Open();
+                }
+            }
+
+            // retorna o gênero encontrado ou null se não for encontrado
+            return generoEncontrado;
         }
 
         /// <summary>
