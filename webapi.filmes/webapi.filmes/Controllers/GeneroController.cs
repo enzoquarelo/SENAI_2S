@@ -102,19 +102,52 @@ namespace webapi.filmes.Controllers
             }
         }
 
+
+        /// <summary>
+        ///endpoint que busca um determinado genero apartir do seu Id
+        /// </summary>
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            GeneroDomain generoBuscado = _generoRepository.BuscarPorId(id);
+            //GeneroDomain generoBuscado = _generoRepository.BuscarPorId(id);
 
-            if (generoBuscado == null)
+            try
             {
-                return NotFound("Nenhum gênero encontrado!");
-            }
+                GeneroDomain generoEncontrado = _generoRepository.BuscarPorId(id);
 
-            return Ok(generoBuscado);
-            //return StatusCode(200, generoBuscado);
+                if (generoEncontrado != null)
+                {
+                    return Ok(generoEncontrado);
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro.Message);
+            }
+        }
+
+
+        /// <summary>
+        ///endpoint que te permite atualizar um genero a partir do seu corpo(Id)
+        /// </summary>
+        [HttpPut]
+        public IActionResult Put(GeneroDomain genero)
+        {
+            try
+            {
+                _generoRepository.AtualizarIdCorpo(genero);
+
+                return StatusCode(200);
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro.Message);
+            }
         }
     }
+    }
 
-}

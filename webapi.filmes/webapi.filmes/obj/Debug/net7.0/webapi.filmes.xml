@@ -26,6 +26,16 @@
             endpoint que aciona o metodo de deletar um genero 
             </summary>
         </member>
+        <member name="M:webapi.filmes.Controllers.GeneroController.GetById(System.Int32)">
+             <summary>
+            endpoint que busca um determinado genero apartir do seu Id
+             </summary>
+        </member>
+        <member name="M:webapi.filmes.Controllers.GeneroController.Put(webapi.filmes.Domains.GeneroDomain)">
+             <summary>
+            endpoint que te permite atualizar um genero a partir do seu corpo(Id)
+             </summary>
+        </member>
         <member name="M:webapi.filmes.Interfaces.IFilmeRepository.Cadastrar(webapi.filmes.Domains.FilmeDomain)">
             <summary>
             Método para cadastrar filmes
