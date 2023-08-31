@@ -5,19 +5,20 @@ namespace webapi.filmes.Interfaces
 {
     public interface IFilmeRepository
     {
-        /// <summary>
-        /// Método para cadastrar filmes
-        /// </summary>
-        /// <param name="novoFilme"></param>
-        void Cadastrar(FilmeDomain novoFilme);
+
+        void Registrar(FilmeDomain filme);
+
         List<FilmeDomain> ListarTodos();
 
-        void AtualizarIdCorpo(FilmeDomain filme);
+
+        FilmeDomain BuscarPorId(int id);
+
+
+        void AtualizarPeloCorpo(FilmeDomain filmeAtualizado);
+
 
         void AtualizarIdUrl(int id, FilmeDomain filme);
 
         void Deletar(int id);
-
-        FilmeDomain BuscarPorId(int id);
     }
 }

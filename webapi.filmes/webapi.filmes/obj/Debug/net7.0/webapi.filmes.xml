@@ -4,6 +4,36 @@
         <name>webapi.filmes</name>
     </assembly>
     <members>
+        <member name="M:webapi.filmes.Controllers.FilmeController.GetAll">
+            <summary>
+            endpoint que permite buscar por todos os filmes
+            </summary>
+        </member>
+        <member name="M:webapi.filmes.Controllers.FilmeController.GetById(System.Int32)">
+            <summary>
+            endpoint que busca um filme através de seu id
+            </summary>
+        </member>
+        <member name="M:webapi.filmes.Controllers.FilmeController.Registrar(webapi.filmes.Domains.FilmeDomain)">
+            <summary>
+            endpoint que permite criar um novo filme
+            </summary>
+        </member>
+        <member name="M:webapi.filmes.Controllers.FilmeController.Delete(System.Int32)">
+            <summary>
+            endpoint que permite deletar um filme
+            </summary>
+        </member>
+        <member name="M:webapi.filmes.Controllers.FilmeController.UpdateByIdUrl(System.Int32,webapi.filmes.Domains.FilmeDomain)">
+            <summary>
+            endpoint que permite atualizar um filme através do id passado pela url
+            </summary>
+        </member>
+        <member name="M:webapi.filmes.Controllers.FilmeController.UpdateByIdBody(webapi.filmes.Domains.FilmeDomain)">
+            <summary>
+            endpoint que faz a atualização de um filme através dos dados passados no corpo da requisição
+            </summary>
+        </member>
         <member name="P:webapi.filmes.Controllers.GeneroController._generoRepository">
             <summary>
             objeto _generoRepository que ira receber todos os metodos definidos na interface
@@ -36,11 +66,10 @@
             endpoint que te permite atualizar um genero a partir do seu corpo(Id)
              </summary>
         </member>
-        <member name="M:webapi.filmes.Interfaces.IFilmeRepository.Cadastrar(webapi.filmes.Domains.FilmeDomain)">
+        <member name="M:webapi.filmes.Controllers.GeneroController.UpdateByIdUrl(System.Int32,webapi.filmes.Domains.GeneroDomain)">
             <summary>
-            Método para cadastrar filmes
+            atualiza um gênero pelo id passado por sua url
             </summary>
-            <param name="novoFilme"></param>
         </member>
         <member name="M:webapi.filmes.Interfaces.IGeneroRepository.Cadastrar(webapi.filmes.Domains.GeneroDomain)">
             <summary>
@@ -80,18 +109,21 @@
             <param name="id"> id do objeto a ser buscado </param>
             <returns></returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:webapi.filmes.Repositories.GeneroRepository.Cadastrar(webapi.filmes.Domains.GeneroDomain)" -->
-        <member name="M:webapi.filmes.Repositories.GeneroRepository.Deletar(System.Int32)">
+        <member name="M:webapi.filmes.Repositories.FilmeRepository.BuscarPorId(System.Int32)">
             <summary>
-            método para deletar um gênero
+            Busca um filme por id
             </summary>
-            <returns></returns>
         </member>
-        <member name="M:webapi.filmes.Repositories.GeneroRepository.ListarTodos">
+        <member name="M:webapi.filmes.Repositories.FilmeRepository.BuscarTodos">
             <summary>
-            método para listar todos os objetos gêneros
+            Busca por todos os filmes
             </summary>
-            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:webapi.filmes.Repositories.FilmeRepository.Deletar(System.Int32)" -->
+        <member name="M:webapi.filmes.Repositories.FilmeRepository.Registrar(webapi.filmes.Domains.FilmeDomain)">
+            <summary>
+            Registra um novo filme
+            </summary>
         </member>
     </members>
 </doc>

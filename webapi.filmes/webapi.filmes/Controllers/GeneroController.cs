@@ -148,6 +148,40 @@ namespace webapi.filmes.Controllers
                 return BadRequest(erro.Message);
             }
         }
+
+
+
+        /// <summary>
+        /// atualiza um gênero pelo id passado por sua url
+        /// </summary>
+        [HttpPut("{id}")]
+        public IActionResult UpdateByIdUrl(int id, GeneroDomain genero)
+        {
+            try
+            {
+                GeneroDomain generoBuscado = _generoRepository.BuscarPorId(id);
+
+                if (generoBuscado != null)
+                {
+                    try
+                    {
+                        _generoRepository.AtualizarIdUrl(id, genero);
+
+                        return StatusCode(204);
+                    }
+                    catch (Exception err)
+                    {
+                        return BadRequest(err.Message);
+                    }
+                }
+
+                return NotFound("O gênero não existe.");
+            }
+            catch (Exception err)
+            {
+                return BadRequest(err.Message);
+            }
+        }
     }
     }
 
