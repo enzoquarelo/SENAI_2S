@@ -26,11 +26,11 @@ namespace webapi.filmes.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(string Email, string Senha)
+        public IActionResult Login(UsuarioDomain usuarioLogin)
         {
             try
             {
-                UsuarioDomain usuario = _usuarioRepository.Login(Email, Senha);
+                UsuarioDomain usuario = _usuarioRepository.Login(usuarioLogin.Email, usuarioLogin.Senha);
 
                 if (usuario == null)
                 {
@@ -64,10 +64,10 @@ namespace webapi.filmes.Controllers
                 var token = new JwtSecurityToken
                     (
                        //emissor do token
-                       issuer: "webapi.FIlmes",
+                       issuer: "webapi.filmes",
 
                        //destinatario do token
-                       audience: "webapi.FIlmes",
+                       audience: "webapi.filmes",
 
                        //dados definidos nas claims(informacoes)
                        claims: claims,
@@ -91,7 +91,6 @@ namespace webapi.filmes.Controllers
             {
                 return BadRequest(erro.Message);
             }
-            return Ok();
         }
     }
 }

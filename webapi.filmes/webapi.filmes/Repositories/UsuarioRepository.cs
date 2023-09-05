@@ -7,47 +7,42 @@ namespace webapi.filmes.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        private string StringConexao = "Data Source = DESKTOP-2KJISQH\\SENAI; Initial Catalog = Filmes; User Id = sa; Pwd = Senai@134";
+        private string stringConexao = "Data Source = DESKTOP-2KJISQH\\SENAI; Initial Catalog = Filmes; User Id = sa; Pwd = Senai@134";
 
-        /// <summary>
-        /// É o método que permite a autenticação do usuário
-        /// </summary>
-        /// <param name="email">O e-mail do usuário</param>
-        /// <param name="senha">A senha do usuário</param>
-        /// <returns>Os dados do usuário em um objeto</returns>
-        public UsuarioDomain Login(string email, string senha)
+        public UsuarioDomain Login(string Email, string Senha)
         {
-            using (SqlConnection connection = new SqlConnection(StringConexao))
+            using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string query = "SELECT Id, Nome, Email, Senha, IsAdmin FROM Usuario " +
-                               "WHERE Email = @Email AND Senha = @Senha";
+                string querySearch = "SELECT IdUsuario, Email, Permissao FROM Usuario WHERE Email = @Email AND Senha = @Senha";
 
-                connection.Open();
-
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (SqlCommand cmd = new SqlCommand(querySearch, con))
                 {
-                    command.Parameters.AddWithValue("@Email", email);
-                    command.Parameters.AddWithValue("@Senha", senha);
+                    cmd.Parameters.AddWithValue("@Email", Email);
+                    cmd.Parameters.AddWithValue("@Senha", Senha);
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    con.Open();
 
-                    if (reader.Read())
+                    SqlDataReader rdr;
+
+                    rdr = cmd.ExecuteReader();
+
+                    if (rdr.Read())
                     {
-                        UsuarioDomain usuarioEncontrado = new UsuarioDomain()
+                        UsuarioDomain usuario = new UsuarioDomain
                         {
-                            IdUsuario = Convert.ToInt32(reader["Id"]),
-                            Nome = reader["Nome"].ToString(),
-                            Email = reader["Email"].ToString(),
-                            Senha = reader["Senha"].ToString(),
-                            IsAdmin = Convert.ToBoolean(reader["IsAdmin"])
+                            IdUsuario = Convert.ToInt32(rdr["IdUsuario"]),
+                            Email = rdr["Email"].ToString()!,
+                            Permissao = rdr["Permissao"].ToString()
                         };
 
-                        return usuarioEncontrado;
+                        return usuario;
+                    }
+                    else
+                    {
+                        return null;
                     }
                 }
             }
-
-            return null;
         }
     }
 }

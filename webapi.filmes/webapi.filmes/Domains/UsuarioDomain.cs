@@ -6,16 +6,12 @@ namespace webapi.filmes.Domains
     {
         public int IdUsuario { get; set; }
 
-        [Required(ErrorMessage = "Campo nome obrigatório!")]
-        public string Nome { get; set; }
-
-        [Required(ErrorMessage = "Campo e-mail obrigatório!")]
+        [Required(ErrorMessage = "O email é obrigatório")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Campo senha obrigatório!")]
+        [Required(ErrorMessage = "A senha é obrigatória")]
         public string Senha { get; set; }
 
-        [Required(ErrorMessage = "O usuário deve possuir uma permição, comum ou administrador!")]
-        public bool IsAdmin { get; set; }
+        public string Permissao { get; set; }
     }
 }
