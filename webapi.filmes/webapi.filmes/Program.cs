@@ -6,6 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 //adiciona o servico de controller
 builder.Services.AddControllers();
 
+
+
+
+
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo

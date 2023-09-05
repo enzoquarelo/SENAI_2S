@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin\\Debug",
+    "\\Controllers",
+    "\\Domains",
+    "\\Interfaces",
+    "\\Repositories"
+  ],
+  "SelectedNode": "\\webapi.filmes.csproj.user",
+  "PreviewInSolutionExplorer": false
+}
