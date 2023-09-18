@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace webapi.event_.senai.Domains
 {
-    [Table("TiposEvento")]
+    [Table(nameof(TiposEvento))]
     public class TiposEvento
     {
         [Key]
