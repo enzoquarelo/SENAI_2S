@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace webapi.event_.senai.Domains
 {
@@ -6,5 +7,9 @@ namespace webapi.event_.senai.Domains
 
     public class Evento
     {
+        [Key]
+        public Guid IdEvento { get; set; } = Guid.NewGuid();
+
+
     }
 }

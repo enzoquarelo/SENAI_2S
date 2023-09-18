@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace webapi.event_.senai.Domains
 {
-    [Table("Instituição")]
+    [Table(nameof(Instituicao))]
     [Index(nameof(CNPJ), IsUnique = true)]
     public class Instituicao
     {
