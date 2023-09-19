@@ -79,3 +79,4 @@ C:\Users\49470161831\Desktop\SENAI_2S\2Sprint_API\Event+ API\webapi.event+.senai
 C:\Users\49470161831\Desktop\SENAI_2S\2Sprint_API\Event+ API\webapi.event+.senai\obj\Debug\net7.0\webapi.event+.senai.pdb
 C:\Users\49470161831\Desktop\SENAI_2S\2Sprint_API\Event+ API\webapi.event+.senai\obj\Debug\net7.0\webapi.event+.senai.genruntimeconfig.cache
 C:\Users\49470161831\Desktop\SENAI_2S\2Sprint_API\Event+ API\webapi.event+.senai\obj\Debug\net7.0\ref\webapi.event+.senai.dll
+C:\Users\49470161831\Desktop\SENAI_2S\2Sprint_API\Event+ API\webapi.event+.senai\bin\Debug\net7.0\BCrypt.Net-Next.dll

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "tv/vm7LiRMtjC7t3H9f6NcH7l+3mFExq9fLrRjItEu08JdRBtSg9duRjkxE0kiNmx4Q6WQrA4J9tgixpGVB3Iw==",
+  "dgSpecHash": "HiGxk2FS+S4SIcpwdL0Hgf/TXrP12WvwJaKLXqy5a8E4k3Kaz9wbCTA9m/SYs6JjDg/y+ihINquvWWJIM6KJaA==",
   "success": true,
   "projectFilePath": "C:\\Users\\49470161831\\Desktop\\SENAI_2S\\2Sprint_API\\Event+ API\\webapi.event+.senai\\webapi.event+.senai.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\49470161831\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\49470161831\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\49470161831\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\49470161831\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\49470161831\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.11\\microsoft.aspnetcore.authentication.jwtbearer.7.0.11.nupkg.sha512",
     "C:\\Users\\49470161831\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.11\\microsoft.aspnetcore.jsonpatch.7.0.11.nupkg.sha512",
