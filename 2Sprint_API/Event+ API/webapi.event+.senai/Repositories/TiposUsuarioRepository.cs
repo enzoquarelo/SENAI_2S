@@ -15,12 +15,21 @@ namespace webapi.event_.senai.Repositories
 
         public void Atualizar(Guid id, TiposUsuario tipoUsuario)
         {
-            throw new NotImplementedException();
+            TiposUsuario usuarioBuscado = _eventContext.TiposUsuario.Find(id)!;
+
+            if (usuarioBuscado != null)
+            {
+                usuarioBuscado.Titulo = tipoUsuario.Titulo;
+            }
+
+            _eventContext.TiposUsuario.Update(usuarioBuscado!);
+
+            _eventContext.SaveChanges();
         }
 
         public TiposUsuario BuscarPorId(Guid id)
         {
-            throw new NotImplementedException();
+            return _eventContext.TiposUsuario.FirstOrDefault(u => u.IdTiposUsuario == id)!;
         }
 
         public void Cadastrar(TiposUsuario tipoUsuario)
@@ -33,12 +42,16 @@ namespace webapi.event_.senai.Repositories
 
         public void Deletar(Guid id)
         {
-            throw new NotImplementedException();
+            TiposUsuario usuarioBuscado = _eventContext.TiposUsuario.Find(id)!;
+
+            _eventContext.TiposUsuario.Remove(usuarioBuscado);
+
+            _eventContext.SaveChanges();
         }
 
         public List<TiposUsuario> Listar()
         {
-            throw new NotImplementedException();
+            return _eventContext.TiposUsuario.ToList();
         }
     }
 }
