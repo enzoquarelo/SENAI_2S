@@ -53,5 +53,25 @@ namespace webapi.event_.senai.Controllers
                 return BadRequest(e.Message);
             }
         }
+
+        [HttpPut("Login")]
+        public IActionResult FoundEmailAndPassword(string email, string senha)
+        {
+            try
+            {
+                Usuario usuario = _UsuarioRepository.BuscarPorEmailESenha(email, senha);
+
+                if (usuario == null)
+                {
+                    return NotFound("Email ou senha inválidos");
+                }
+
+                return Ok(usuario);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
     }
 }
