@@ -11,6 +11,7 @@ namespace webapi.event_.senai.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
+    [Authorize(Roles = "Administrador")]
     public class InstituicaoController : ControllerBase
     {
         private readonly IInstituiçãoRepository _instituicaoRepository;

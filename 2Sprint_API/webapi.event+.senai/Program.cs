@@ -44,7 +44,8 @@ builder.Services.AddSwaggerGen(options =>
         {
             Name = "Example Contact",
             Url = new Uri("https://example.com/contact")
-        });
+        }
+    });
 
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
     {

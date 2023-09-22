@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 using webapi.event_.senai.Domains;
 using webapi.event_.senai.Interfaces;
 using webapi.event_.senai.Repositories;
@@ -9,6 +11,7 @@ namespace webapi.event_.senai.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
+    [Authorize(Roles = "Administrador")]
     public class EventoController : ControllerBase
     {
         private IEventoRepository _eventoRepository;
