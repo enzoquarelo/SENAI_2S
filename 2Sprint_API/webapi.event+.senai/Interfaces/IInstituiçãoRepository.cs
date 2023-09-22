@@ -2,7 +2,7 @@
 
 namespace webapi.event_.senai.Interfaces
 {
-    public interface IInstituiçãoRepositorycs
+    public interface IInstituiçãoRepository
     {
         void Cadastrar(Instituicao instituicao);
     }

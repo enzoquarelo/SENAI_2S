@@ -1,4 +1,5 @@
-﻿using webapi.event_.senai.Domains;
+﻿using System.Diagnostics.Tracing;
+using webapi.event_.senai.Domains;
 
 namespace webapi.event_.senai.Interfaces
 {
@@ -10,6 +11,7 @@ namespace webapi.event_.senai.Interfaces
 
         List<ComentariosEvento> Listar();
 
-        void Atualizar(Guid id, ComentariosEvento comentariosEvento);
+        ComentariosEvento GetById(Guid id);
+
     }
 }
