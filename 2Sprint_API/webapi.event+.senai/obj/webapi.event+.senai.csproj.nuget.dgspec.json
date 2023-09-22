@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\49470161831\\Desktop\\SENAI_2S\\2Sprint_API\\Event+ API\\webapi.event+.senai\\webapi.event+.senai.csproj": {}
+    "C:\\Users\\49470161831\\Desktop\\SENAI_2S\\2Sprint_API\\webapi.event+.senai\\webapi.event+.senai.csproj": {}
   },
   "projects": {
-    "C:\\Users\\49470161831\\Desktop\\SENAI_2S\\2Sprint_API\\Event+ API\\webapi.event+.senai\\webapi.event+.senai.csproj": {
+    "C:\\Users\\49470161831\\Desktop\\SENAI_2S\\2Sprint_API\\webapi.event+.senai\\webapi.event+.senai.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\49470161831\\Desktop\\SENAI_2S\\2Sprint_API\\Event+ API\\webapi.event+.senai\\webapi.event+.senai.csproj",
+        "projectUniqueName": "C:\\Users\\49470161831\\Desktop\\SENAI_2S\\2Sprint_API\\webapi.event+.senai\\webapi.event+.senai.csproj",
         "projectName": "webapi.event+.senai",
-        "projectPath": "C:\\Users\\49470161831\\Desktop\\SENAI_2S\\2Sprint_API\\Event+ API\\webapi.event+.senai\\webapi.event+.senai.csproj",
+        "projectPath": "C:\\Users\\49470161831\\Desktop\\SENAI_2S\\2Sprint_API\\webapi.event+.senai\\webapi.event+.senai.csproj",
         "packagesPath": "C:\\Users\\49470161831\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\49470161831\\Desktop\\SENAI_2S\\2Sprint_API\\Event+ API\\webapi.event+.senai\\obj\\",
+        "outputPath": "C:\\Users\\49470161831\\Desktop\\SENAI_2S\\2Sprint_API\\webapi.event+.senai\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\49470161831\\AppData\\Roaming\\NuGet\\NuGet.Config",

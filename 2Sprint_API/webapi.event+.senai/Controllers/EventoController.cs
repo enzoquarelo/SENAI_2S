@@ -9,21 +9,22 @@ namespace webapi.event_.senai.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
-    public class TiposEventoController : ControllerBase
+    public class EventoController : ControllerBase
     {
-        private ITiposEventoRepository _tiposEventoRepository;
+        private IEventoRepository _eventoRepository;
 
-        public TiposEventoController()
+        public EventoController()
         {
-            _tiposEventoRepository = new TiposEventoRepository();
+            _eventoRepository = new EventoRepository();
         }
 
+
         [HttpPost]
-        public IActionResult Post(TiposEvento tiposEvento)
+        public IActionResult Post(Evento evento)
         {
             try
             {
-                _tiposEventoRepository.Cadastrar(tiposEvento);
+                _eventoRepository.Cadastrar(evento);
 
                 return StatusCode(201);
             }
@@ -39,7 +40,7 @@ namespace webapi.event_.senai.Controllers
         {
             try
             {
-                return Ok(_tiposEventoRepository.Listar());
+                return Ok(_eventoRepository.Listar());
             }
             catch (Exception e)
             {
@@ -53,7 +54,7 @@ namespace webapi.event_.senai.Controllers
         {
             try
             {
-                _tiposEventoRepository.Deletar(id);
+                _eventoRepository.Deletar(id);
 
                 return NoContent();
             }
@@ -64,11 +65,11 @@ namespace webapi.event_.senai.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(Guid id, TiposEvento tiposEvento)
+        public IActionResult Put(Guid id, Evento evento)
         {
             try
             {
-                _tiposEventoRepository.Atualizar(id, tiposEvento);
+                _eventoRepository.Atualizar(id, evento);
 
                 return NoContent();
             }

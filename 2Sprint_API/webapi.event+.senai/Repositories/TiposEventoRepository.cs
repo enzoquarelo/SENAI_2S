@@ -17,7 +17,16 @@ namespace webapi.event_.senai.Repositories
 
         public void Atualizar(Guid id, TiposEvento tiposEvento)
         {
-            throw new NotImplementedException();
+            TiposEvento eventoBuscado = _eventContext.TiposEvento.Find(id)!;
+
+            if (eventoBuscado != null)
+            {
+                eventoBuscado.Titulo = tiposEvento.Titulo;
+            }
+
+            _eventContext.TiposEvento.Update(eventoBuscado!);
+
+            _eventContext.SaveChanges();
         }
 
         public void Cadastrar(TiposEvento tiposEvento)
@@ -29,12 +38,16 @@ namespace webapi.event_.senai.Repositories
 
         public void Deletar(Guid id)
         {
-            throw new NotImplementedException();
+            TiposEvento eventoBuscado = _eventContext.TiposEvento.Find(id)!;
+
+            _eventContext.TiposEvento.Remove(eventoBuscado);
+
+            _eventContext.SaveChanges();
         }
 
         public List<TiposEvento> Listar()
         {
-            throw new NotImplementedException();
+            return _eventContext.TiposEvento.ToList();
         }
     }
 }
