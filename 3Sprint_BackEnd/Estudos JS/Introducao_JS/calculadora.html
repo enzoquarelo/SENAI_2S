@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora JavaScript</title>
+</head>
+
+<body style="display: flex; flex-direction: column ;align-items: center;">
+
+    <section style="width: 480px; height: 280px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <h1 style="font-family: Arial, Helvetica, sans-serif;">Calculadora em JS</h1>
+
+        <form>
+            <label style="font-family: Arial, Helvetica, sans-serif; font-size: 14px;">Informe o tipo da operação
+                matemática:</label>
+            <select name="typeFunction" id="selectCalc">
+                <option value="">Selecione</option>
+                <option value="value1">Soma</option>
+                <option value="value2">Subtração</option>
+                <option value="value3">Multiplicação</option>
+                <option value="value4">Divisão</option>
+            </select>
+
+            </br></br>
+
+            <label for="n1" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px;">Informe o 1°
+                número</label>
+            <input type="number" id="n1">
+
+            </br></br>
+
+            <label for="n2" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px;">Informe o 2°
+                número</label>
+            <input type="number" id="n2">
+
+            </br>
+
+            <button onclick="calculate()"
+                style="background-color: transparent; height: 30px; width: 100px; border-radius: 25px; margin-left: 130px; margin-top: 30px; font-weight: bold;">Calcular</button>
+        </form>
+
+    </section>
+
+    <script>
+        function calculate() {
+
+            let valueN1 = document.getElementById('n1');
+            let valueN2 = document.getElementById('n2');
+            var typeFunctionSelect = document.getElementById('selectCalc');
+            var resultCalc = document.getElementById('result');
+
+            var n1 = parseFloat(valueN1.value);
+            var n2 = parseFloat(valueN2.value);
+
+            var selectedOperation = typeFunctionSelect.value;
+
+            if (selectedOperation === 'value1') {
+
+                const result = n1 + n2;
+                alert(`Resultado: ${result}`);
+
+            } else if (selectedOperation === 'value2') {
+
+                const result = n1 - n2;
+                alert(`Resultado: ${result}`);
+
+            } else if (selectedOperation === 'value3') {
+
+                const result = n1 * n2;
+                alert(`Resultado: ${result}`);
+
+            }
+            else if (selectedOperation === 'value4') {
+
+                const result = n1 / n2;
+                alert(`Resultado: ${result}`);
+
+            }
+            else
+            {
+                alert('Operação inválida!')
+            }
+        }
+    </script>
+
+</body>
+
+</html>
