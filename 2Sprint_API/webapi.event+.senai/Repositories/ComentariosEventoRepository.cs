@@ -16,12 +16,6 @@ namespace webapi.event_.senai.Repositories
         }
 
 
-
-        public void Atualizar(Guid id, ComentariosEvento comentariosEvento)
-        {
-            throw new NotImplementedException();
-        }
-
         public void Cadastrar(ComentariosEvento comentariosEvento)
         {
             _comentarioEventoContext.ComentariosEvento.Add(comentariosEvento);
