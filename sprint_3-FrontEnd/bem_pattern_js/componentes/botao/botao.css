@@ -1,0 +1,44 @@
+.button{
+    display: block;
+    width: 300px;
+    height: 40px;
+    min-width: 150px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: none;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.button:hover{
+    opacity: .8;
+}
+
+.button--sucess{
+    background-color: rgb(69, 163, 69);
+    color: white;
+}
+
+.button--warning{
+    background-color: rgb(218, 218, 26);
+}
+
+.button--danger{
+    background-color: red;
+    color: white;
+}
+
+.section_buttons{
+    width: 320px;
+    height: 280px;
+
+    border: 1px solid pink;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

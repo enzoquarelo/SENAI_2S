@@ -1,0 +1,38 @@
+/* container */
+
+.titulo{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* texto */
+
+.titulo__texto{
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+/* linha */
+
+.titulo__linha{
+    width: 200px;
+    border: 2px solid #B51D44;
+}
+
+
+/* texto branco */
+
+.titulo__texto--branco{
+    color: white;
+}
+
+/* linha branca */
+
+.titulo__linha--branca{
+    border-color: white;
+}
