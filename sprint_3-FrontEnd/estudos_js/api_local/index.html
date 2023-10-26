@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="cadastrar(event)">
+        <label for="nome">Nome</label>
+        <input type="text" placeholder="informe o nome:" id="endereco">
+        <br><br>
+
+        <label for="email">Email</label>
+        <input type="text" placeholder="informe seu email:" id="endereco">
+        <br><br>
+
+        <label for="cep">CEP</label>
+        <input type="number" autocomplete="off" placeholder="digite seu cep" id="cep" onblur="buscarEndereco(this.value)">
+        <br><br>
+
+        <label for="endereco">Endereco</label>
+        <input type="text" placeholder="..." id="endereco">
+        <br><br>
+
+        <label for="complemento">Complemento</label>
+        <input type="text" placeholder="..." id="endereco">
+        <br><br>
+
+        <label for="cidade">Cidade</label>
+        <input type="text" placeholder="..." id="cidade">
+        <br><br>
+
+        <label for="Estado">Estado</label>
+        <input type="text" placeholder="..." id="estado">
+        <br><br>
+
+        <button>Cadastrar</button>
+    </form>
+    <script src="/scripts/scripts.js"></script>
+</body>
+
+</html>

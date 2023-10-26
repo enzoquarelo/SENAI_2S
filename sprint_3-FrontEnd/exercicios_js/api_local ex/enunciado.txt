@@ -1,0 +1,8 @@
+criar um cadastro de frutas que exiba as frutas cadastradas em uma lista ul.
+
+O programa deverá ter um formulário web. 
+O programa deverá utilizar arrays
+A lista deverá aparecer em ordem alfabética
+você deverá exibir os dados com foreach e utilizar arrow funcitions
+
+DESAFIO : Salvar a lista de frutas na api local com json-server
