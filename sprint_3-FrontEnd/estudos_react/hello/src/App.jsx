@@ -1,7 +1,3 @@
-import Title from './components/Title/Title'
-import CardEvento from './components/CardEvento/CardEvento'
-import Container from './components/Container/Container'
-
 import './App.css';
 import Rotas from './routes';
 
