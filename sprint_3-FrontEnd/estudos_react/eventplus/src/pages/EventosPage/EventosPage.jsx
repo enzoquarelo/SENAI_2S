@@ -1,12 +1,12 @@
 import React from 'react';
-import Title from '../../components/Title/Title';
+import Titulo from '../../componentes/Titulo/Titulo';
 
-const Eventos = () => {
-    return(
+const EventosPage = () => {
+    return (
         <div>
-            <Title pageNome="Página Eventos" />
+            <Titulo nomePage="Eventos" />
         </div>
-    )
-}
+    );
+};
 
-export default Eventos;
+export default EventosPage;
