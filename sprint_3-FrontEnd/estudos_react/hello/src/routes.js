@@ -1,9 +1,6 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { Route as Rota, BrowserRouter, Routes } from 'react-router-dom'
 import Nav from "./components/Nav/Nav";
-
-// Import dos Contextos
-import ThemeContext from "./context/ThemeContext";
 
 // import dos componentes - páginas
 import HomePage from "./pages/HomePage/HomePage";
@@ -19,12 +16,8 @@ import MyProductsPage from "./pages/MyProductsPage/MyProductsPage"
 
 const Rotas = () => {
 
-    const [theme, setTheme] = useState("Light");
-
-
     return (
         <BrowserRouter>
-            <ThemeContext.Provider value={{theme, setTheme}}>
 
                 <Nav />
 
@@ -36,8 +29,6 @@ const Rotas = () => {
                     <Rota element={<MyProductsPage />} path={"/meus-pedidos"} />
                     <Rota element={<LoginPage />} path={"/login"} />
                 </Routes>
-
-            </ThemeContext.Provider>
         </BrowserRouter>
     );
 }

@@ -1,12 +1,18 @@
-import { Route } from 'react-router-dom';
-import './App.css';
-import Rotas from './routes';
+import React, { useContext, useState } from "react";
+import "./App.css";
+import Rotas from "./routes";
+
+import ThemeContext from "./context/ThemeContext";
 
 function App() {
+  const [theme, setTheme] = useState("Light");
+
   return (
-    <div className="App">
-      <Rotas/>
-    </div>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div className={`App ${theme === "Dark" ? "App-dark" : ""}`}>
+        <Rotas />
+      </div>
+    </ThemeContext.Provider>
   );
 }
 

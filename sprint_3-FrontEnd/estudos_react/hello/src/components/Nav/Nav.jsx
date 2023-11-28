@@ -19,7 +19,7 @@ const Nav = () => {
             <Link to={"/importante"}>Dados Importantes</Link> | &nbsp;
             <Link to={"/meus-pedidos"}>Dados Pessoais</Link> | &nbsp;
             <Link to={"/login"}>Login</Link> | &nbsp;
-            <button onClick={toggleTheme}>Mudar Tema</button>
+            <button onClick={toggleTheme}>{theme}</button>
             
         </header>
     );
