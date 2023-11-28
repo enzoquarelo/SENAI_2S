@@ -1,14 +1,14 @@
 import React from "react";
-import './CardEvento.css'
+import "./CardEvento.css"
 
-const CardEvento = (props) => {
+const CardEvento = ({titulo, descricao, link}) => {
     return (
         <div className="card-evento">
-            <h3 className="card-evento__titulo">{props.titulo}</h3>
-            <p className="card-evento__text">{props.texto}</p>
-            <a href="" className="card-evento__conection">{props.link}</a>
-        </div>
+        <h3 className="card-evento__titulo">{titulo}</h3>
+        <p className="card-evento__text">{descricao}</p>
+       <a href="" className="card-evento__conection">{link}</a>
+    </div>
     );
-}
+};
 
-export default CardEvento;
+export default CardEvento
